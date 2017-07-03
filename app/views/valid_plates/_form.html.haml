@@ -1,0 +1,18 @@
+.form-horizontal
+    = form_with(model: valid_plate, local: true) do |form|
+        - if valid_plate.errors.any?
+            #error_explanation
+                %h2
+                    = pluralize(valid_plate.errors.count, "error")
+                    prohibited this valid_plate from being saved:
+                %ul
+                    - valid_plate.errors.full_messages.each do |message|
+                        %li= message
+        .form-group
+            %label Number
+            = form.text_field :number
+        .form-group
+            %label Owner
+            = form.text_field :owner
+        .actions
+            = form.submit

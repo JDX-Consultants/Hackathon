@@ -1,0 +1,44 @@
+// Place all the styles related to the command controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.direction {
+  height: 50px;
+  width: 100px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 25%; /* may require vendor prefixes */
+  background: yellow;
+}
+
+.scan {
+  height: 50px;
+  width: 100px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 25%; /* may require vendor prefixes */
+  background: green;
+  text-color: white;
+}
+
+
+.view {
+  position: absolute;
+  opacity: 0.8;
+  width:1000px;
+  height:700px;
+}
+
+.fail {
+  color: red;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.success {
+  color: green;
+  font-size: 1.5em;
+  text-align: center;
+}

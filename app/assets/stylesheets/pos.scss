@@ -1,0 +1,25 @@
+// Place all the styles related to the pos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.map-image {
+    position:relative;
+    background-image: image-url('map.png');
+    width: 1200px;
+    height: 766px;
+}
+
+.pp-dot {
+    width: 5px;
+    height: 5px;
+    position: absolute; 
+    background-color: yellow;
+}
+
+.pp-corner {
+    width: 14px;
+    height: 20px;
+    position: absolute; 
+    background-color: red;
+    text-align: center;
+}

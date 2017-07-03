@@ -1,0 +1,10 @@
+.panel.panel-default
+    .panel-heading List of positions
+    / .panel-body.filter
+    /     Start date/time
+    /     = text_field_tag :start_time, DateTime.now, id: 'start-time'
+    /     End date/time
+    /     = text_field_tag :end_time, DateTime.now, id: 'end-time'
+    #pos-table= render partial: 'pos_table'
+
+%button.button= link_to 'Delete Table', delete_all_pp_index_path, method: :delete, 

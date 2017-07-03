@@ -1,0 +1,12 @@
+%meta{'http-equiv' => "refresh",  content: "1"}
+= image_tag 'last_image.jpg', class: :view
+%p
+- last_hit = ScannedPlate.order('last_checked DESC').first
+- if last_hit
+    - if last_hit.status == ScannedPlate::VALID
+        .success
+            = "Last scan: #{last_hit.number}, status: 'VALID', "
+            = "owner: #{last_hit.valid_plate.owner}"
+    - else
+        .fail= "Last scan: #{last_hit.number}, status: 'INVALID'"
+

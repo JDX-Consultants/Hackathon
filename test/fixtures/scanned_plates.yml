@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  status: MyString
+  valid_plate_id: 1
+  last_checked: 2017-06-27 23:31:50
+
+two:
+  number: MyString
+  status: MyString
+  valid_plate_id: 1
+  last_checked: 2017-06-27 23:31:50

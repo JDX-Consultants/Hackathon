@@ -1,0 +1,26 @@
+%h1 Moving TAF
+.row
+    .col-sm-3
+        %iframe{width: "1000", height: "800", src: image_command_path ,frameborder: "0"}
+    .col-sm-6
+        .row
+            .col-sm-offset-5.col-sm-2
+                .direction= link_to 'Straight', command_path(left: 100, right: 100, duration: 2000), method: :patch
+        .row
+            .col-sm-offset-3.col-sm-2
+                .direction= link_to 'Half Left', command_path(left: 50, right: 0, duration: 350), method: :patch
+            .col-sm-offset-2.col-sm-2
+                .direction= link_to 'Half Right', command_path(left: 0, right: 50, duration: 350), method: :patch
+        .row
+            .col-sm-offset-1.col-sm-2
+                .direction= link_to 'Left', command_path(left: 100, right: -100, duration: 350), method: :patch
+            .col-sm-offset-6.col-sm-2
+                .direction= link_to 'Right', command_path(left: -100, right: 100, duration: 350), method: :patch
+        .row
+            .col-sm-offset-3.col-sm-2
+                .direction= link_to 'Half left', command_path(left: 0, right: -50, duration: 350), method: :patch
+            .col-sm-offset-2.col-sm-2
+                .direction= link_to 'Half right', command_path(left: -50, right: 0, duration: 350), method: :patch
+        .row
+            .col-sm-offset-5.col-sm-2
+                .direction= link_to 'Back', command_path(left: -100, right: -100, duration: 2000), method: :patch

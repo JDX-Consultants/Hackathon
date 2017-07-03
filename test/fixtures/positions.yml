@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longitude: 1
+  latitude: 1
+  moment: 2017-06-27 12:57:48
+
+two:
+  longitude: 1
+  latitude: 1
+  moment: 2017-06-27 12:57:48

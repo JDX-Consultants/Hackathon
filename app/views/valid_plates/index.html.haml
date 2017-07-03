@@ -1,0 +1,19 @@
+%p#notice= notice
+%h1 Valid Plates
+%table.table.table-striped.table-hover.table-condensed
+    %tr
+        %th Number
+        %th Owner
+        %th Searched
+        %th Actions
+    - @valid_plates.each do |valid_plate|
+        %tr
+            %td= valid_plate.number
+            %td= valid_plate.owner
+            %td= valid_plate.light_plate
+            %td
+                = link_to 'Edit', edit_valid_plate_path(valid_plate)
+                |
+                = link_to 'Destroy', valid_plate, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Valid Plate', new_valid_plate_path

@@ -1,0 +1,20 @@
+!!!
+%html
+    %head
+        %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+        %title Plate
+        =render partial: 'refresh'
+        = csrf_meta_tags
+        = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+        = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %body
+        %nav.navbar.navbar-default
+            %ul.nav.navbar-nav
+                %li=link_to 'Commands', command_path
+                %li=link_to 'Scanned Plates', plate_index_path
+                %li=link_to 'Valid Plates', valid_plates_path
+                %li=link_to 'Parking Places', pp_index_path
+                %li=link_to 'Positions', pos_path
+                %li=link_to 'Map', map_path
+        = yield
+

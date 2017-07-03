@@ -1,0 +1,14 @@
+.panel.panel-default
+    .panel-heading List of existing plates
+    %table.table.table-striped.table-bordered.table-hover.table-condensed
+        %tr
+            %th Number
+            %th Last checked
+            %th Status
+            %th Owner
+        - for plate in ScannedPlate.all.order('last_checked DESC')
+            %tr
+                %td= plate.number
+                %td= plate.last_checked
+                %td= plate.status == ScannedPlate::VALID ? 'Valid' : 'Invalid'
+                %td= plate.valid_plate.owner if plate.valid_plate

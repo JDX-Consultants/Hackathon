@@ -1,0 +1,12 @@
+.panel.panel-default
+    .panel-heading List of parking places
+    %table.table.table-striped.table-bordered.table-hover.table-condensed
+        %tr
+            %th Position
+            %th Longitude
+            %th Latitude
+        - for pp in PP.all
+            %tr
+                %td= pp.pos
+                %td= pp.longitude
+                %td= pp.latitude

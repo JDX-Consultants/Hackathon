@@ -1,0 +1,8 @@
+%h1 Map Here
+
+.map-image
+    - for pos in Position.all
+        .pp-dot{style: "bottom: #{pos_y(50.661487, 50.661124, pos.latitude)}px; left: #{pos_x(4.628611, 4.629516, pos.longitude)}px;"}
+    - for pp in PP.all
+        .pp-corner{style: "bottom: #{pos_y(50.661487, 50.661124, pp.latitude)}px; left: #{pos_x(4.628611, 4.629516, pp.longitude)}px;"}= pp.pos
+

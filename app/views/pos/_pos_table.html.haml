@@ -1,0 +1,12 @@
+%table.table.table-striped.table-bordered.table-hover.table-condensed
+    %tr
+        %th Time
+        %th Longitude
+        %th Latitude
+        %th Speed (m/s)
+    - for pos in Position.all
+        %tr
+            %td= pos.moment
+            %td= pos.longitude
+            %td= pos.latitude
+            %td= pos.speed
